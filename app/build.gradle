@@ -19,6 +19,11 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
+        /** Replace with your api_token which you get from https://openweathermap.org/
+         * For eg: Your api token is 46hssat257ai80ntx83nh4acd
+         * Following line should be replaced by following, including Backslash
+         * buildConfigField 'String', 'API_DEVELOPER_TOKEN', "\"46hssat257ai80ntx83nh4acd\""*/
+
         buildConfigField 'String', 'API_KEY', "\"ebb2b81f3128504d3988dfffa06a75ae\""
     }
 
