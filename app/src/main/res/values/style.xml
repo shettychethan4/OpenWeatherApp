@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="textBig" parent="@android:style/TextAppearance.Large">
+        <item name="android:textSize">72sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+</resources>

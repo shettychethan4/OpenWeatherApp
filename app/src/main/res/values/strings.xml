@@ -1,3 +1,22 @@
 <resources>
     <string name="app_name">OpenWeatherMap</string>
+    <string name="current_place">Bengaluru</string>
+    <string name="temperature_value">33</string>
+    <string name="clear_sky">clear sky</string>
+    <string name="mandatory_permission">You need to accept location permissions to use this app.</string>
+    <string name="internet">No internet connection!</string>
+    <string name="temperature_unit">%s °C</string>
+    <string name="humidity">Humidity</string>
+    <string name="humidity_value">Humidity - %s %%</string>
+    <string name="pressure_value">Pressure - %s hPa</string>
+    <string name="wind_value">Wind - %s m/s</string>
+    <string name="sunrise_value">Sunrise - %s </string>
+    <string name="sunset_value">Sunset - %s </string>
+    <string name="pressure">Pressure</string>
+    <string name="wind">Wind</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="sunset">Sunset</string>
+    <string name="get_location_data">Get Location Data</string>
+
+
 </resources>
