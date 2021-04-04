@@ -128,7 +128,7 @@ class MainActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks, G
     private fun setData(value: WeatherResponse) {
         binding.location.text = value.name
         binding.temp.text = resources.getString(
-            R.string.temperature_unit, value.main?.temp?.getTemperatureString()
+            R.string.temperature_unit, value.main?.temp?.getTemperatureInString()
         )
         binding.humidity.text = resources.getString(
             R.string.humidity_value,

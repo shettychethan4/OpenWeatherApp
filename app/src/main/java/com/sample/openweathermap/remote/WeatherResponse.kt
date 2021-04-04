@@ -60,7 +60,7 @@ data class WeatherResponse(
     var wind: Wind? = null,
 
     ) {
-    constructor() : this(0, 0, null, null, null, 0, null, null, "", 0, null, "", null)
+    constructor() : this(0, 0, null, null, null, 0, null, null, "", 0, null, null, null)
 }
 
 data class Sys(

@@ -6,7 +6,7 @@ buildscript {
         gradleVersion = "4.1.0"
         kotlin_version = "1.4.31"
         play_services_location = "18.0.0"
-        easy_permission ="3.0.0"
+        easy_permission = "3.0.0"
         gsonVersion = '2.8.6'
         okhttp = '4.9.0'
         retrofit = '2.9.0'
