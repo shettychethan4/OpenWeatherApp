@@ -5,10 +5,10 @@ Open Weather App in clean architecture built with Jetpack components.
 - Retrofit : For Network calls
 - Architecture : MVVM
 - Coroutines for asyncrnous operations
-- Room : For offline persistence and Paging Library
+- Room : For offline persistence 
+- Work Manager : Fetches weather data every 2 hour (Periodic Request)
 - Live Data : To notify view for data change
 - Hilt : For dependency injection
-- Work Manager : Fetches weather data every 2 hour (Periodic Request)
 - Language : Kotlin
 - Testcases : Junit and Room Database test cases
 
