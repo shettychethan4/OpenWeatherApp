@@ -10,5 +10,6 @@ Open Weather App in clean architecture built with Jetpack components.
 - Hilt : For dependency injection
 - Work Manager : Fetches weather data every 2 hour (Periodic Request)
 - Language : Kotlin
+- Testcases : Junit and Room Database test cases
 
 You need an API Key to use the OpenWeatherMap API. Head on over to their https://openweathermap.org/ if you don't already have one. Follow instructions in build-gradle (app) to integrate API key to build the project.
