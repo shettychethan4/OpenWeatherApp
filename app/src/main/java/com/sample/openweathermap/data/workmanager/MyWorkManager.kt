@@ -20,9 +20,23 @@ class MyWorkManager constructor(
     override suspend fun doWork(): Result {
         val latitude = pref.getLatitude()
         val longitude = pref.getLongitude()
-        return if (latitude != "" && longitude != "")
+
+        /* latitude?.let { it1 ->
+             longitude?.let {
+                 it2 ->
+                 withContext(Dispatchers.IO) {
+                     weatherDataSource.fetchData(it1, it2)
+                     return@withContext Result.success()
+                 }
+
+             }
+         }*/
+
+
+
+        return if (latitude?.isNotEmpty() == true && longitude != null)
             withContext(Dispatchers.IO) {
-                weatherDataSource.fetchData(latitude!!, longitude!!)
+                weatherDataSource.fetchData(latitude, longitude)
                 return@withContext Result.success()
             }
         else

@@ -1,6 +1,7 @@
 package com.sample.openweathermap.di
 
 import android.app.Application
+import android.content.Context
 import androidx.work.WorkManager
 import com.google.gson.Gson
 import com.sample.openweathermap.BuildConfig
@@ -74,6 +75,10 @@ object AppModule {
     @Singleton
     fun provideGson(): Gson = Gson()
 
+    @Singleton
+    @Provides
+    fun provideApplcationContext(app: Application): Context = app.applicationContext
+
 
     private fun createRetrofit(
         okhttpClient: OkHttpClient,
@@ -86,10 +91,6 @@ object AppModule {
             .build()
     }
 
-    @Singleton
-    @Provides
-    fun provideSharedPreference(app: Application) =
-        SharedPreferencesRepository(app.applicationContext)
 
     @Singleton
     @Provides

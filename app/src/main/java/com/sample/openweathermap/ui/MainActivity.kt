@@ -41,6 +41,7 @@ class MainActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks, G
         fusedLocationClient = LocationServices.getFusedLocationProviderClient(this)
         checkInternet()
         requestPermission()
+        dataForLastLocation(preference.getLatitude(), preference.getLongitude())
         observerData()
     }
 
@@ -115,7 +116,6 @@ class MainActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks, G
     }
 
     private fun subscribeUI(latitude: String, longitude: String) {
-        saveToSharedPreference(latitude, longitude)
         viewModel.observeWeatherData(
             isConnected,
             latitude,
@@ -162,11 +162,28 @@ class MainActivity : AppCompatActivity(), EasyPermissions.PermissionCallbacks, G
                     location?.let {
                         binding.button.isEnabled = false
                         subscribeUI(location.latitude.toString(), location.longitude.toString())
+                        saveToSharedPreference(
+                            location.latitude.toString(),
+                            location.longitude.toString()
+                        )
                     }
                 }
             return
         }
         requestForPermissionAgain()
+    }
+
+    fun dataForLastLocation(latitude: String?, longitude: String?) {
+        if (EasyPermissions.hasPermissions(this, Manifest.permission.ACCESS_COARSE_LOCATION)) {
+
+            if (latitude != null && longitude != null) {
+                subscribeUI(latitude, longitude)
+            }
+
+            return
+        }
+        requestForPermissionAgain()
+
     }
 
 

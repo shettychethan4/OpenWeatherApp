@@ -20,7 +20,6 @@ class MyWorkerFactory @Inject constructor(
         workerClassName: String,
         workerParameters: WorkerParameters
     ): ListenableWorker {
-        println("Location from WMF ")
         return MyWorkManager(appContext, workerParameters, weatherDataSource, preferences)
     }
 }

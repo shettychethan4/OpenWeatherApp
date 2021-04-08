@@ -2,8 +2,13 @@ package com.sample.openweathermap.common
 
 import android.content.Context
 import android.content.SharedPreferences
+import javax.inject.Inject
+import javax.inject.Singleton
 
-class SharedPreferencesRepository(context: Context) {
+@Singleton
+class SharedPreferencesRepository @Inject constructor(
+    context: Context
+) {
 
     companion object {
         const val SHARED_PREFERENCES = "shared_preferences"
